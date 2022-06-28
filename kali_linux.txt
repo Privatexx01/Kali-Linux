@@ -1,0 +1,212 @@
+python -V  python'un sürümünü verir
+python2'nin yanında python3 de kurulu  python3 -V
+Python 2.7.18
+Python 3.9.8
+
+ctrl+d çıkış
+
+whereis python
+/usr/bin/python /usr/share/python
+
+sudo apt-get install python3 paketten kurulum
+Python3’ü kaynaktan derlerken iki seçeneğiniz var: Python3’ü root hakları ile kurmak veya Python3’ü 
+yetkisiz kullanıcı olarak kurmak. Normal şartlar altında eğer kullandığınız sistemde 
+root haklarına sahipseniz Python3’ü yetkili kullanıcı olarak kurmanızı tavsiye ederim.
+
+https://www.python.org/ftp/python/
+Python-3.9.9.tar.xz
+Daha sonra bu sıkıştırılmış dosyayı açıyoruz. Açılan klasörün içine girip, orada ilk olarak şu komutu veriyoruz:
+
+./configure
+
+./ işareti, o anda içinde bulunduğunuz dizinde yer alan configure adlı bir betiği çalıştırmanızı sağlıyor.
+make
+sudo make altinstall
+https://www.python.org/ftp/python/ sürüm seçiyoruz
+Python’ın resmi sitesinde dolaşırken kurulum dosyaları arasında, ‘web-based installer’ (web tabanlı kurulum betiği)
+adlı bir kurulum dosyası görebilirsiniz. Bu kurulum dosyası, Python’ın çalışması için gereken dosyaları kurulum 
+esnasında internetten indirip kuran, 1MB’dan küçük bir kurulum programı içerir. 
+Dolayısıyla eğer kurulumu bu dosyadan yapacaksanız, kesintisiz bir internet bağlantısına ihtiyacınız olacak.
+
+python-openssl bulunamadı
+
+/usr/lib
+%LOCALAPPDATA%\Programs\Python windowsta
+kurduğumuz python sürümleri burada
+
+python komutu python2 yi
+python3 komutu da python3'ü çalıştırıyor
+
+
+windowsta python sürümü 3.9.2
+
+çekirdek(kernel)->bilgisayar sistemlerinde donanım ve yazılımların birbirleri
+arasındaki iletişimi sağlayan ara birim
+
+komut satırı->kullanıcıdan gelen komutları yorumlayarak kernel'a iletir
+kernel da bu komutları donanımlara ulaştırarak istenilen sürecin tamamlanmasını sağlar
+
+cat /etc/shells
+çıkan sonuçlar komut satırı programları
+echo $SHELL  kullandığımız komut satırı programı
+
+en geniş yetkili olan /bin/bash
+?komut satırları arasında geçiş yapamıyorum
+
+ortam değişkenleri->programların çalıştırılabilir dosyalarının kaydedildiği dizinlerdir. O dizinlere koyulan programların
+sadece ismi kullanılarak çalıştırılmalı
+/bin/bash değil de bash yazarız sadece
+
+acho $PATH ortam değişkenlerini verir
+ls (dizin) o dizinin içindekiler çıkıyor
+yeşiller çalıştırabilir program
+maviler dizin,klasör anlamındadır
+
+whatis ls ->ls aracı aracı hakkında özet bilgi veriyor 
+upgrade->yükseltmek
+update->güncellemek
+
+apropos->hatırlamakta zorlandığımız komutları hatırladığımız ne varsa yazarak o komuta ulaşabiliriz
+
+--help parametresi araç hakkında detaylı bilgi verir
+man->kapsamlı kılavuz
+
+sistem bilgisi hakkında bilgiler verir
+hostname->bilgisayarın adını yazdırır
+privatex|kali
+kullanıcı adı|bilgisayarın adı
+
+--help
+lsb_release->dağıtımın özel bilgilerini verir
+lsb_release -a
+No LSB modules are available.
+Distributor ID: Kali
+Description:    Kali GNU/Linux Rolling
+Release:        2021.3
+Codename:       kali-rolling
+
+cat /etc/os-release
+PRETTY_NAME="Kali GNU/Linux Rolling"
+NAME="Kali GNU/Linux"
+ID=kali
+VERSION="2021.3"
+VERSION_ID="2021.3"
+VERSION_CODENAME="kali-rolling"
+ID_LIKE=debian
+ANSI_COLOR="1;31"
+HOME_URL="https://www.kali.org/"
+SUPPORT_URL="https://forums.kali.org/"
+BUG_REPORT_URL="https://bugs.kali.org/"
+
+
+MX Linux
+Manjaro
+Linux Mint
+Ubuntu
+Debian
+Elementary OS
+Solus
+Fedora
+Pop! OS
+Zorin
+bazı linux dağıtımları
+
+linux bir işletim sistemidir
+İlk olarak belki de en önemlisi açık kaynak kodlu yazılımdır.
+Linux kullanılırken oluşturulan kodların hepsi ücretsiz olması yazılımcılar tarafından
+görülmesine, değiştirilmesine ve geliştirilmesine olanağı sağlıyor.
+
+cat /etc/issue
+Kali GNU/Linux Rolling \n \l
+
+uname -all
+Linux kali 5.10.0-kali3-amd64 #1 SMP Debian 5.10.13-1kali1 (2021-02-08) x86_64 GNU/Linux
+
+kullanıcı bilgileri hakkında
+cat /etc/passwd
+komut satırına erişimi olan kullanıcıları görebiliriz
+root:x:0:0:root:/root:/usr/bin/zsh
+privatex:x:1000:1000:,,,:/home/privatex:/usr/bin/zsh
+                         privatex isimli kullanıcıya ayrılmış alan
+			 yani dosyalarının bulunduğu alan
+diğerleri servislerin kullanıcıları nologin
+?postgres:x:119:123:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+
+sudo passwd root
+[sudo] password for privatex: privatex kullanıcısının şifresi girilir
+Yeni parola: root kullanıcısı için şifre belirlenir
+Yeni parolayı tekrar girin: 
+passwd: şifre başarıyla güncellendi
+
+w
+aktif olan kullanıcıları
+bu kullanıcıların kullanmış olduğu uygulamalar
+giriş saatleri
+bunları gösterir
+
+whoami
+kullanıcıyı gösterir
+
+uptime sistem saati 
+kaç kullanıcının aktif olduğu ne kadar süre kaldıkları felan
+(w) bu komutla da çıkıyor
+
+top
+hangi kullanıcının hangi uygulamayı kullandığını
+ve bunun ne kadar işlemci ve ram tükettiğini görmemizi sağlayan bir komut
+
+fdisk -l
+sistemdeki diskleri görüntüler. Çıkarılabilir,sabit disk felam
+boyutlarını görmemizi sağlıyor
+
+df 
+disklerin doluluk oranını gösterir
+
+cal 12 1960 ,12.ayı gösterir 
+cal 1980 ,12 ayı gösterir
+
+date
+
+pwd 
+o an içinde bulunduğumuz dizini gösterir
+ls
+bulunduğumuz dizindeki içerikleri gösterir
+mavi renktekiler dizin yani klasör içerisine girebiliriz 
+ls -l
+ls -a gizli dosyaları,klasörleri gösterir(başında . olur)
+ls -al
+beyazlar dosyayı işaret ediyor
+cd dizinler arası geçişi sağlar
+cd .. geri gider 
+cd dizin de yapılabilir direkt istenilen dizine gider
+apropos geldi aklıma 
+locate (aklımızda kalan parçalar) ona göre de dosya ve dizinler çıkıyor
+
+touch ile bir dosya oluşturabiliriz
+echo (ne yazmak istiyorsak buraya yazıyoruz) > dosyanın adı
+cat ile dosyanın içeriğini okuyoruz komut satırı üzerinde görünür içerik
+more,less içeriği uzun olan dosyaları okumamızı sağlayan komut
+grep (ne aradığımız) dosya adı
+mkdir dizin adı   dizin oluşturma
+rm -rf(-r) dizini silerken bu şekilde siliyoruz
+cp (-r(dizinse))neyi kopyalayacağız,nereye
+mv neyi taşıyacağız,nereye
+mv dizinx/ /root/Masaüstü(örnek)
+
+
+useradd kullanıcı adı    kullanıcı ekleme
+userdel kullanıcı adı    kullanıcıyı silme
+
+bulunduğumuz dizin (.)
+tar arşivleme yapıyor sıkıştırma yapmıyor
+-cf(arşivleme)
+-xf(çözme)
+tar -zcf deneme.tar.gz ./* şıkıştırma yapar böyle
+gzip,bzip2 dosyaları şıkıştırarak arşivliyor
+gzip -9 dosyax 
+-9 parametresi en iyi sıkıştırmak için
+gunzip dosyax.gz 
+bzip2 dosyax
+bunzip2 dosyax.bz2
+zip -r deneme.zip ./*
+unzip deneme.zip
